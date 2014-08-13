@@ -12,8 +12,8 @@ class TwitterCldr.BreakIterator
 		@exceptions_resource_data = `{{{exceptions_resource_data}}}`
 		@root_resource = `{{{root_resource_data}}}`
 
-		@unescape_resource(@tailoring_resource_data)
-		@unescape_resource(@root_resource)
+		# @unescape_resource(@tailoring_resource_data)
+		# @unescape_resource(@root_resource)
 
 	unescape_resource : (resource) ->
 		if resource instanceof Array

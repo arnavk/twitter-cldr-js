@@ -33,7 +33,7 @@ class TwitterCldr.DateTimeFormatter
       'v': 'timezone_generic_non_location'
       'V': 'timezone_metazone'
 
-  @tokens = {}
+  @tokens = TwitterCldr.get_data().DateTimeFormatter.tokens
 
   tokens: ->
     TwitterCldr.DateTimeFormatter.tokens

@@ -27,14 +27,21 @@ TwitterCldr.is_rtl = true;
 TwitterCldr.is_rtl = false;
 {{/is_rtl?}}
 TwitterCldr.locale = "{{current_locale}}";
-{{> utilities}}
-{{{contents}}}
+
 
 TwitterCldr.set_data = (bundle) ->
+  TwitterCldr.data = bundle
   for key, sub_bundle of bundle
     for bundle_key, bundle_value of sub_bundle
       @[key][bundle_key] = bundle_value
   null
+
+TwitterCldr.get_data = ->
+  TwitterCldr.data || {}
+
+
+{{> utilities}}
+{{{contents}}}
 
 root = if exports?
   exports
